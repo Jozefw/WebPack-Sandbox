@@ -68,20 +68,36 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-const sum = (a,b)=>a + b;
+"use strict";
 
 
-module.exports = sum;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var sum = function sum(a, b) {
+  return a + b;
+};
+
+// module.exports = sum;
+exports.default = sum;
 
 /***/ },
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
-const summing = __webpack_require__(0);
+"use strict";
 
-const total = summing(20,30)
+
+var _sum = __webpack_require__(0);
+
+var _sum2 = _interopRequireDefault(_sum);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var total = (0, _sum2.default)(20, 30); // const summing = require('./sum');
+
 console.log(total);
 
 /***/ }
